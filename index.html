@@ -8,28 +8,35 @@
   <title>Accessible Me</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&family=Stick+No+Bills:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&family=Stick+No+Bills:wght@300&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body>
-  <div class="container">
-    <div class="site-header">
+<body itemscope itemtype="http://schema.org/Organization">
+  <div class="container" itemprop="mainEntity" itemscope itemtype="http://schema.org/LocalBusiness">
+    <div class="site-header" role="banner">
       <h1>Jam Box Studios</h1>
-      <div class="main-nav">
+      <nav class="main-nav" role="navigation">
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="#">Reservation</a></li>
-          <li><a href="#">Studio</a></li>
+          <li><a href="#" itemprop="target">Home</a></li>
+          <li><a href="#" itemprop="target">Products</a></li>
+          <li><a href="#" itemprop="target">Reservation</a></li>
+          <li><a href="#" itemprop="target">Studio</a></li>
         </ul>
-      </div>
-      <img src="https://placekitten.com/1200/900" class="banner">
+      </nav>
+      <img src="https://placekitten.com/1200/900" alt="Jam Box Studios banner image" class="banner">
     </div>
-    <div class="main-content">
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <div id="main-content" class="main-content" role="main">
       <h1>Welcome to Jam Box</h1>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus laboriosam praesentium nostrum ipsa eveniet, officia deserunt cumque eius esse enim, ipsam accusantium autem nihil quaerat sequi perferendis optio quia veritatis.</p>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam perferendis expedita sed itaque odit ipsam omnis, eos voluptates magni fugit culpa voluptatibus, inventore eaque, eligendi voluptatum! Voluptate iusto error voluptatibus.</p>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus laboriosam praesentium nostrum ipsa
+        eveniet, officia deserunt cumque eius esse enim, ipsam accusantium autem nihil quaerat sequi perferendis optio
+        quia veritatis.</p>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam perferendis expedita sed itaque odit ipsam
+        omnis, eos voluptates magni fugit culpa voluptatibus, inventore eaque, eligendi voluptatum! Voluptate iusto
+        error voluptatibus.</p>
       <div class="owner">
         <h1>Meet the owner</h1>
         <ul>
@@ -46,20 +53,28 @@
           B3T 0L0
         </p>
       </div>
+
       <div class="contact-section">
         <h1>Contact Us</h1>
-        <form action="thanks.html">
-          <label>Full Name</label>
-          <input type="text" placeholder="Full Name">
-          <input type="text" placeholder="Email">
-          <input type="text" placeholder="Subject">
-          <b>Your Message</b>
-          <textarea></textarea>
+        <form action="thanks.html" role="form">
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" name="fullname" placeholder="Full Name" required>
+        
+          <label for="email">Email</label>
+          <input type="text" id="email" name="email" placeholder="Email" required>
+        
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="Subject" required>
+        
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" required></textarea>
+        
           <button type="submit">Send</button>
         </form>
+        
       </div>
     </div>
-    <div class="site-footer">
+    <div class="site-footer" role="contentinfo">
       &copy; 2021 Jam Box Studios
     </div>
   </div>
